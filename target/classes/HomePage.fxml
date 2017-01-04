@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" stylesheets="@modena_dark.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXMLHomePageController">
+	<children>
+		<MenuBar fx:id="menuBar" prefHeight="30.0" prefWidth="700.0">
+			<menus>
+				<Menu fx:id="menuGerenciar" mnemonicParsing="false" text="Gerenciar">
+					<items>
+						<MenuItem fx:id="menuItemProdutos" mnemonicParsing="false" onAction="#loadGerenciarProdutosScene" text="Produtos" />
+						<MenuItem fx:id="menuItemFornecedores" mnemonicParsing="false" onAction="#loadGerenciarFornecedoresScene" text="Fornecedores" />
+					</items>
+				</Menu>
+            <Menu fx:id="menuGrafico" mnemonicParsing="false" text="Gráficos">
+              <items>
+                <MenuItem fx:id="menuItemGrafico" mnemonicParsing="false" onAction="#loadGraficoProdutoScene" text="Produtos por Fornecedor" />
+              </items>
+            </Menu>
+			</menus>
+		</MenuBar>
+		<AnchorPane fx:id="anchorPane" />
+	</children>
+</VBox>

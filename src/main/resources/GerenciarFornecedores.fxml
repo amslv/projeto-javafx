@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="450.0" prefWidth="700.0" stylesheets="@modena_dark.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXMLGerenciarFornecedorController">
+   <children>
+      <TableView fx:id="tableViewFornecedores" layoutX="15.0" layoutY="106.0" prefHeight="250.0" prefWidth="670.0">
+        <columns>
+          <TableColumn fx:id="colIdFornecedor" prefWidth="75.0" text="#" />
+          <TableColumn fx:id="colNomeFantasia" prefWidth="156.0" text="Nome Fantasia" />
+            <TableColumn fx:id="colCnpjFornecedor" prefWidth="191.0" text="CNPJ" />
+            <TableColumn fx:id="colEmailFornecedor" prefWidth="247.0" text="E-mail" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNovoFornecedor" layoutX="535.0" layoutY="50.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Novo Fornecedor"  onAction="#loadNovoFornecedorScene"/>
+      <Button fx:id="btnDetalhesFornecedor" layoutX="15.0" layoutY="378.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Detalhes" onAction="#loadDetalhesFornecedorScene"/>
+      <Button fx:id="btnAlterarFornecedor" layoutX="180.0" layoutY="378.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Alterar" onAction="#loadAlterarFornecedorScene"/>
+      <Button fx:id="btnRemoverFornecedor" layoutX="350.0" layoutY="378.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Remover" onAction="#handleRemoverFornecedor" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="450.0" prefWidth="700.0" stylesheets="@modena_dark.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXMLEditarFornecedorController">
+	<children>
+		<GridPane fx:id="gridPane" layoutX="14.0" layoutY="36.0" prefHeight="358.0" prefWidth="329.0">
+			<columnConstraints>
+				<ColumnConstraints hgrow="SOMETIMES" maxWidth="160.0" minWidth="10.0" prefWidth="95.0" />
+				<ColumnConstraints hgrow="SOMETIMES" maxWidth="234.0" minWidth="10.0" prefWidth="234.0" />
+			</columnConstraints>
+			<rowConstraints>
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+			</rowConstraints>
+			<children>
+				<Label fx:id="lblNomeFantasia" text="Nome Fantasia:" />
+				<Label fx:id="lblCnpj" text="CNPJ:" GridPane.rowIndex="1" />
+				<Label fx:id="lblEmail" text="E-mail:" GridPane.rowIndex="2" />
+				<Label fx:id="lblNomeDaRua" text="Nome da Rua:" GridPane.rowIndex="3" />
+				<Label fx:id="lblNumero" text="Número:" GridPane.rowIndex="4" />
+				<Label fx:id="lblBairro" text="Bairro:" GridPane.rowIndex="5" />
+				<Label fx:id="lblCidade" text="Cidade:" GridPane.rowIndex="6" />
+				<Label fx:id="lblEstado" text="Estado:" GridPane.rowIndex="7" />
+				<TextField fx:id="tfNomeFantasia" GridPane.columnIndex="1" />
+				<TextField fx:id="tfCnpj" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+				<TextField fx:id="tfEmail" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+				<TextField fx:id="tfNomeDaRua" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+				<TextField fx:id="tfNumero" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+				<TextField fx:id="tfBairro" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+				<TextField fx:id="tfCidade" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+				<ComboBox fx:id="comboBoxEstados" prefHeight="25.0" prefWidth="241.0" promptText="Selecione o Estado" GridPane.columnIndex="1" GridPane.rowIndex="7">
+				</ComboBox>
+			</children>
+		</GridPane>
+		<Separator layoutX="347.0" orientation="VERTICAL" prefHeight="450.0" prefWidth="9.0" />
+		<TableView fx:id="tableViewProdutos" layoutX="362.0" layoutY="132.0" prefHeight="200.0" prefWidth="329.0">
+			<columns>
+				<TableColumn fx:id="colNomeProduto" prefWidth="104.0" text="Nome" />
+				<TableColumn fx:id="colDescricaoProduto" prefWidth="235.0" text="Descrição" />
+			</columns>
+		</TableView>
+		<Button fx:id="btnCancelar" layoutX="566.0" layoutY="382.0" mnemonicParsing="false" onAction="#handleCancelar" prefHeight="25.0" prefWidth="120.0" text="Cancelar" />
+		<Button fx:id="btnSalvarFornecedor" layoutX="406.0" layoutY="382.0" mnemonicParsing="false" onAction="#handleAtualizarFornecedor" prefHeight="25.0" prefWidth="120.0" text="Atualizar Fornecedor" />
+		<Label fx:id="lblProdutosFornecidos" layoutX="356.0" layoutY="44.0" text="Produtos Fornecidos">
+			<font>
+				<Font size="18.0" />
+			</font>
+		</Label>
+		<ComboBox fx:id="comboBoxProduto" layoutX="356.0" layoutY="90.0" prefHeight="25.0" prefWidth="220.0" promptText="Selecione os produtos" />
+		<Button fx:id="btnAdicionarProdutos" layoutX="626.0" layoutY="90.0" mnemonicParsing="false" onAction="#handleAdicionarProduto" prefHeight="25.0" prefWidth="60.0" text="+" />
+	</children>
+</AnchorPane>

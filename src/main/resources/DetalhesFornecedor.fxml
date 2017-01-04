@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane fx:id="anchorPane" prefHeight="450.0" prefWidth="700.0" stylesheets="@modena_dark.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXMLDetalhesFornecedorController">
+   <children>
+      <TableView fx:id="tableViewProdutosFornecidos" layoutX="16.0" layoutY="316.0" prefHeight="120.0" prefWidth="675.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="75.0" text="#" />
+          <TableColumn fx:id="colNome" prefWidth="193.0" text="Nome" />
+            <TableColumn fx:id="colDescricao" prefWidth="406.0" text="Descrição" />
+        </columns>
+      </TableView>
+      <Label fx:id="lblDetalhesFornecedor" layoutX="14.0" layoutY="26.0" text="Detalhes do Fornecedor">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <SplitPane fx:id="splitPane" dividerPositions="0.5" layoutX="14.0" layoutY="83.0" prefHeight="200.0" prefWidth="675.0">
+        <items>
+          <AnchorPane fx:id="anchorPaneInfoBasic" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label fx:id="lblNf" layoutX="14.0" layoutY="23.0" text="Nome Fantasia:" />
+                  <Label fx:id="lblCn" layoutX="17.0" layoutY="76.0" text="CNPJ:" />
+                  <Label fx:id="lblEm" layoutX="14.0" layoutY="127.0" text="E-mail:" />
+                  <Label fx:id="labelNome" layoutX="116.0" layoutY="23.0" />
+                  <Label fx:id="labelCnpj" layoutX="102.0" layoutY="76.0" />
+                  <Label fx:id="labelEmail" layoutX="74.0" layoutY="127.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane fx:id="anchorPaneEndereco" minHeight="0.0" minWidth="0.0" prefHeight="158.0" prefWidth="369.0">
+               <children>
+                  <Label fx:id="lblNdR" layoutX="14.0" layoutY="14.0" text="Nome da Rua:" />
+                  <Label fx:id="lblN" layoutX="14.0" layoutY="50.0" text="Número:" />
+                  <Label fx:id="lblBr" layoutX="14.0" layoutY="82.0" text="Bairro:" />
+                  <Label fx:id="lblC" layoutX="14.0" layoutY="114.0" text="Cidade:" />
+                  <Label fx:id="lblE" layoutX="14.0" layoutY="150.0" text="Estado:" />
+                  <Label fx:id="labelNomeDaRua" layoutX="103.0" layoutY="14.0" />
+                  <Label fx:id="labelNumero" layoutX="89.0" layoutY="50.0" />
+                  <Label fx:id="labelBairro" layoutX="89.0" layoutY="82.0" />
+                  <Label fx:id="labelCidade" layoutX="76.0" layoutY="114.0" />
+                  <Label fx:id="labelEstado" layoutX="76.0" layoutY="150.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <Button fx:id="btnVoltar" layoutX="536.0" layoutY="22.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" text="Voltar" onAction="#handleRetornarGerenciarFornecedor" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="450.0" prefWidth="700.0" stylesheets="@modena_dark.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXMLGerenciarProdutoController">
+   <children>
+      <TableView fx:id="tableViewProdutos" layoutX="15.0" layoutY="106.0" prefHeight="250.0" prefWidth="670.0">
+        <columns>
+          <TableColumn fx:id="colIdProduto" prefWidth="75.0" text="#" />
+          <TableColumn fx:id="colNomeProduto" prefWidth="91.0" text="Nome" />
+            <TableColumn fx:id="colDescricaoProduto" prefWidth="173.0" text="Descrição" />
+            <TableColumn fx:id="colQuantidadeProduto" prefWidth="78.0" text="Quantidade" />
+            <TableColumn fx:id="colValorCompra" prefWidth="128.0" text="Valor de Compra (R$)" />
+            <TableColumn fx:id="colValorVenda" prefWidth="124.0" text="Valor de Venda (R$)" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNovoProduto" layoutX="535.0" layoutY="50.0" mnemonicParsing="false" onAction="#loadCadastroProdutoScene" prefHeight="40.0" prefWidth="150.0" text="Novo Produto" />
+      <Button fx:id="btnAlterarProduto" layoutX="15.0" layoutY="378.0" mnemonicParsing="false" onAction="#loadAlterarProdutoScene" prefHeight="40.0" prefWidth="150.0" text="Alterar" />
+      <Button fx:id="btnRemoverProduto" layoutX="200.0" layoutY="378.0" mnemonicParsing="false" onAction="#handleDeleteProduto" prefHeight="40.0" prefWidth="150.0" text="Remover" />
+   </children>
+</AnchorPane>
