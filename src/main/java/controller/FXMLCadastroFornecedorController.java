@@ -102,7 +102,7 @@ public class FXMLCadastroFornecedorController implements Initializable {
 		} else {
 			Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Erro!");
-            alert.setHeaderText("Ocorreu um erro ao processar a opera�ao");
+            alert.setHeaderText("Ocorreu um erro ao processar a operação");
             alert.setContentText("Por favor, selecione um produto!");
             alert.show();
 		}
@@ -114,27 +114,27 @@ public class FXMLCadastroFornecedorController implements Initializable {
 		estados.add("Alagoas");
 		estados.add("Amazonas");
 		estados.add("Bahia");
-		estados.add("Cear�");
+		estados.add("Ceará");
 		estados.add("Distrito Federal");
-		estados.add("Esp�rito Santo");
-		estados.add("Goi�s");
-		estados.add("Maranh�o");
+		estados.add("Espírito Santo");
+		estados.add("Goiás");
+		estados.add("Maranhão");
 		estados.add("Mato Grosso");
 		estados.add("Mato Grosso do Sul");
 		estados.add("Minas Gerais");
-		estados.add("Par�");
-		estados.add("Para�ba");
-		estados.add("Paran�");
+		estados.add("Pará");
+		estados.add("Paraíba");
+		estados.add("Paraná");
 		estados.add("Pernambuco");
-		estados.add("Piau�");
-		estados.add("Rond�nia");
+		estados.add("Piauí");
+		estados.add("Rondônia");
 		estados.add("Roraima");
 		estados.add("Rio de Janeiro");
 		estados.add("Rio Grande do Norte");
 		estados.add("Rio Grande do Sul");
 		estados.add("Santa Catarina");
 		estados.add("Sergipe");
-		estados.add("S�o Paulo");
+		estados.add("São Paulo");
 		estados.add("Tocantins");
 		
 		comboBoxEstados.getItems().addAll(estados);
